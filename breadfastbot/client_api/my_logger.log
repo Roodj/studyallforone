@@ -1,0 +1,47 @@
+Failed to parse: https://practicumgra№de.github.io/course-material/bakery-menu.json
+Traceback (most recent call last):
+  File "C:\Users\stepa\AppData\Roaming\Python\Python311\site-packages\requests\models.py", line 433, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+                                                      ^^^^^^^^^^^^^^
+  File "C:\Users\stepa\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\url.py", line 397, in parse_url
+    return six.raise_from(LocationParseError(source_url), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+urllib3.exceptions.LocationParseError: Failed to parse: https://practicumgra№de.github.io/course-material/bakery-menu.json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\NotUseful\playground\projects\breadfastbot\client_api\main.py", line 30, in get_menu
+    response = requests.get(menu_url)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stepa\AppData\Roaming\Python\Python311\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stepa\AppData\Roaming\Python\Python311\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stepa\AppData\Roaming\Python\Python311\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stepa\AppData\Roaming\Python\Python311\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "C:\Users\stepa\AppData\Roaming\Python\Python311\site-packages\requests\models.py", line 367, in prepare
+    self.prepare_url(url, params)
+  File "C:\Users\stepa\AppData\Roaming\Python\Python311\site-packages\requests\models.py", line 435, in prepare_url
+    raise InvalidURL(*e.args)
+requests.exceptions.InvalidURL: Failed to parse: https://practicumgra№de.github.io/course-material/bakery-menu.json
+
+Traceback (most recent call last):
+  File "D:\NotUseful\playground\projects\breadfastbot\client_api\main.py", line 30, in get_menu
+    response = requests.get(menu_url)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stepa\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1118, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stepa\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1122, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stepa\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1177, in _execute_mock_call
+    raise effect
+requests.exceptions.ConnectionError
